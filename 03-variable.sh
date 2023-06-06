@@ -9,3 +9,6 @@ echo $a
 echo $b
 echo $c
 echo $topic
+
+TODAY_DATE=$date
+echo $TODAY_DATE
