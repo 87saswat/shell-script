@@ -14,7 +14,13 @@ echo "Hello I am $1"    #saswat
 echo "I am learning $2" # Cloud Devops
 echo " My trainer name is $3" "Manu-Verma"
 
-echo $*    #Going to printall the used variable in the script
-echo $?
-echo $#
-echo $@
+
+A=10
+B=20
+echo $*    # Going to printall the used variable in the script
+echo $@    # same as $*
+echo $?    # prints he exit code of the last command
+echo $$    # prints the current process id of the process
+echo $#    # prints the number of arguments
+
+
