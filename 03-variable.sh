@@ -10,5 +10,5 @@ echo $b
 echo $c
 echo $topic
 
-TODAY_DATE=$(date)
+TODAY_DATE=$(date+%F)
 echo ${TODAY_DATE}
