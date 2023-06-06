@@ -10,6 +10,11 @@ echo "Name of the script executed is $0"
 
 # $1 to $9 can be used to give commandline argument
 
-echo "Hello I am $1"
-echo "I am learning $2"
-echo " My trainer name is $3"
+echo "Hello I am $1"    #saswat
+echo "I am learning $2" # Cloud Devops
+echo " My trainer name is $3" "Manu-Verma"
+
+echo $*    #Going to printall the used variable in the script
+echo $?
+echo $#
+echo $@
