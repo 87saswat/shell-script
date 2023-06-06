@@ -23,6 +23,6 @@ echo $?    # prints he exit code of the last command
 echo $$    # prints the current process id of the process
 echo $#    # prints the number of arguments
 
-
+# Input from user
 read -p "what is your name" name
 echo Hello $name
