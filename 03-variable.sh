@@ -15,3 +15,6 @@ echo ${TODAY_DATE}
 
 X=$(uptime)
 echo $X
+
+USER=$(who | grep centos | wc -l)
+echo $USER
