@@ -24,5 +24,5 @@ echo $$    # prints the current process id of the process
 echo $#    # prints the number of arguments
 
 
-read -p "what is your name" $name
+read -p "what is your name" name
 echo Hello $name
