@@ -12,3 +12,6 @@ echo $topic
 
 TODAY_DATE=$(date +%F)
 echo ${TODAY_DATE}
+
+X=$(uptime)
+echo $X
