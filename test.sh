@@ -2,11 +2,24 @@
 
 echo starting the script
 
-ID=$(id -u)
-echo $ID
+# SYNTAX OF case
+# case $VAR in 
+#     opt1) command1 ;;
+#     opt2) command2 ;;
+# esac
 
-if [$ID ne 1000]; then
-echo -e "\e[31m You need to be a root user and sudo previlage t run this script \e[0m"
-exit 1
 
-fi
+ACTION=$1    # THE VALUE OF ACTION I WANT TO TAKE FROM THE COMMAND LINE
+
+case $ACTION in
+    start)
+        echo "Starting the server"
+        ;;
+    stop)
+        echo "Stopping the server"
+        ;;
+   
+        
+    *)
+        echo "the options are start, stop and exit only"
+
