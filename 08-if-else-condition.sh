@@ -2,7 +2,7 @@
 
 ACTION=$1
 
-if ["$ACTION" == "start"]; then
+if [ "$ACTION" == "start" ]; then
     echo -e "\e[31m Server starting \e[0m"
     exit 0
 
