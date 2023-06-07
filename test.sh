@@ -21,5 +21,6 @@ case $ACTION in
    
         
     *)
-        echo "the options are start, stop and exit only"
+        echo "the options are start, stop and exit only" ;;
+        
 
