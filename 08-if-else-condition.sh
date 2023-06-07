@@ -14,11 +14,11 @@
 
 VAR=$1
 
-if [ "$VAR" le 10 ]; then
+if [ "$VAR" -le 10 ]; then
     echo "Value is too small"
-elif ["$VAR" le 20 ]; then
+elif ["$VAR" -le 20 ]; then
     echo "Value is on medium range"
-elif [ "$VAR" le 100 ]; then
+elif [ "$VAR" -le 100 ]; then
     echo "WHOAA !! a Big number"
 
 else
