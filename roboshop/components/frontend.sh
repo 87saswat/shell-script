@@ -3,7 +3,7 @@ echo "Installing nginix:"
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then
     echo -e "\e[31m This script is expected is run by a root user or with sudo previlage \e[0m"
-    exit 1
+    exit 2
 
 fi    
 yum install nginix -y
