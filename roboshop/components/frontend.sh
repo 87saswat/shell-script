@@ -25,7 +25,7 @@ fi
 
 echo -n "Performing cleanup...."
 cd /usr/share/nginx/html
-rm -rf *  &>>  "/tmp/${COMPONENT}.log"
+rm -rf * &>> "/tmp/${COMPONENT}.log"
 
 if [ $? -eq 0 ]; then
     echo -e "\e[32m Cleanup success \e[0m"
