@@ -11,7 +11,7 @@ if [ $? -eq 0 ]; then
     echo -e "\e[32m Intsllation success \e[0m"
 
 else
-    echo -e "\e[32m Installation not success \e[0m"
+    echo -e "\e[31m Installation not success \e[0m"
 fi
 
 # yum install nginx -y
