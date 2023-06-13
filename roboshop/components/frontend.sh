@@ -5,7 +5,7 @@ if [ $ID -ne 0 ] ; then
     echo -e "\e[31m This script is expected is run by a root user or with sudo previlage \e[0m"
     exit 1
 fi    
-yum install nginxvv -y &>> "/tmp/${COMPONENT}.log"
+yum install nginx -y &>> "/tmp/${COMPONENT}.log"
 
 if [ $? -eq 0 ]; then
     echo -e "\e[32m Intsllation success \e[0m"
