@@ -20,7 +20,7 @@ yum install nginx -y &>> "/tmp/${COMPONENT}.log"
 stat $?
 
 
-echo -n "Downloading ${COMPONENT} component ................."
+echo -n "Downloading ${COMPONENT} component ...."
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 stat $?
 
