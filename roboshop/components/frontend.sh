@@ -17,7 +17,7 @@ fi
 
 echo -n "Installing nginx...." 
 yum install nginx -y &>> "/tmp/${COMPONENT}.log"
-
+stat $?
 
 
 echo -n "Downloading ${COMPONENT} component ................."
@@ -27,7 +27,6 @@ stat $?
 echo -n "Performing cleanup...."
 cd /usr/share/nginx/html
 rm -rf * &>> "/tmp/${COMPONENT}.log"
-
 stat $?
 
 # systemctl enable nginx
