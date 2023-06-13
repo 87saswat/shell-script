@@ -28,8 +28,8 @@ cd /usr/share/nginx/html
 rm -rf *  &>>  "/tmp/${COMPONENT}.log"
 
 if [ $? -eq 0 ]; then
-    echo -e "\e[32m Download ..... success \e[0m"
-else    echo -e "\e[31m Download .... failed \e[0m"
+    echo -e "\e[32m Cleanup ..... success \e[0m"
+else    echo -e "\e[31m Cleanup .... failed \e[0m"
 
 fi
 
