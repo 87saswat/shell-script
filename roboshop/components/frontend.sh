@@ -7,6 +7,10 @@ if [ $ID -ne 0 ] ; then
 fi    
 yum install nginx -y &>> "/tmp/${COMPONENT}.log"
 
+if [ $? -eq 0 ]; then
+    echo -e "\e[31m Intsllation success -e[0m"
+fi
+
 # yum install nginx -y
 # systemctl enable nginx
 # systemctl start nginx
