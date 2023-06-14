@@ -1,5 +1,6 @@
 #!bin/bash
 COMPONENT=frontend
+LOGFILE="/tmp/${COMPONENT}.log"
 ID=$(id -u)
 if [ $ID -ne 0 ] ; then
     echo -e "\e[31m This script is expected is run by a root user or with sudo previlage \e[0m"
@@ -16,7 +17,7 @@ fi
 }
 
 echo -n "Installing nginx...." 
-yum install nginx -y &>> "/tmp/${COMPONENT}.log"
+yum install nginx -y &>> $LOGFILE
 stat $?
 
 
@@ -26,11 +27,10 @@ stat $?
 
 echo -n "Performing cleanup...."
 cd /usr/share/nginx/html
-rm -rf * &>> "/tmp/${COMPONENT}.log"
+rm -rf * &>> $LOGFILE
 stat $?
 
-unzip /tmp/frontend.zip &>> "/tmp/${COMPONENT}.log"
-
+unzip /tmp/frontend.zip &>> $LOGFILE
 
 
 # systemctl enable nginx
