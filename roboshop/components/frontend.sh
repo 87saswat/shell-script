@@ -29,6 +29,9 @@ cd /usr/share/nginx/html
 rm -rf * &>> "/tmp/${COMPONENT}.log"
 stat $?
 
+unzip /tmp/frontend.zip
+
+
 # systemctl enable nginx
 # systemctl start nginx
 # curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
