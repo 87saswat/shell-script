@@ -29,7 +29,7 @@ cd /usr/share/nginx/html
 rm -rf * &>> "/tmp/${COMPONENT}.log"
 stat $?
 
-unzip /tmp/frontend.zip
+unzip /tmp/frontend.zip &>> "/tmp/${COMPONENT}.log"
 
 
 # systemctl enable nginx
