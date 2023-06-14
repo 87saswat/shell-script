@@ -27,10 +27,14 @@ stat $?
 
 echo -n "Performing cleanup...."
 cd /usr/share/nginx/html
-rm -rf * &>> $LOGFILE
+rm -rf * &>> $LOGFILE   
 stat $?
 
 unzip /tmp/frontend.zip &>> $LOGFILE
+
+mv frontend-main/* .
+mv static/* .
+stat $?
 
 
 # systemctl enable nginx
