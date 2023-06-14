@@ -30,10 +30,19 @@ cd /usr/share/nginx/html
 rm -rf * &>> $LOGFILE   
 stat $?
 
+echo -n "Extracting component"
 unzip /tmp/frontend.zip &>> $LOGFILE
 
 mv frontend-main/* .
 mv static/* .
+rm -rf frontend-main README.md
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+stat $?
+
+echo -n "Restrating frontend component"
+
+systemctl enable nginx
+systemctl start nginx
 stat $?
 
 
