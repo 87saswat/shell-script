@@ -2,7 +2,7 @@
 echo "Installing mongodb.."
 
 COMPONENT=mongodb
-LOGFILE="/tmp/${COMPONEMT}.log
+LOGFILE="/tmp/${COMPONEMT}.log"
 ID=$(id -u)
 
 if [ $ID -ne 0 ]; then
