@@ -2,6 +2,7 @@
 echo "Installing mongodb.."
 
 COMPONENT=mongodb
+LOGFILE="/tmp/${COMPONEMT}.log
 ID=$(id -u)
 
 if [ $ID -ne 0 ]; then
@@ -21,21 +22,17 @@ stat() {
 
 
 #  Setup MongoDB repos.
-echo -n "Configuring the ${COMPONENT} repo:"
+echo -n "Configuring the ${COMPONENT} repo...:"
 
-# ```bash
-# # curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
-# ```
 
-# 1. Install Mongo & Start Service.
+curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
+stat $?
 
-# ```bash
-# # yum install -y mongodb-org
-# # systemctl enable mongod
-# # systemctl start mongod
+echo -n "Install ${COMPONENT}..."
+yum install -y mongodb-org &>> $LOGFILE
+stat $?
 
-# ```
 
-# 1. Update Listen IP address from 127.0.0.1 to 0.0.0.0 in the config file, so that MongoDB can be accessed by other services.
 
-# Config file:   `# vim /etc/mongod.conf`
+
+
