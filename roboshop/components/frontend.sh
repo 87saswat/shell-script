@@ -42,7 +42,7 @@ stat $?
 echo -n "Restrating frontend component"
 
 systemctl enable nginx
-systemctl start nginx &>> $LOGFILE
+systemctl start nginx &>> $LOGFILE  
 stat $?
 
 echo "FRONTEND COMPONENT INSTALLED SUCESSFULLY" 
